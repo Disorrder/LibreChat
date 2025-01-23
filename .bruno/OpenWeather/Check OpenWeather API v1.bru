@@ -1,0 +1,18 @@
+meta {
+  name: Check OpenWeather API v1
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://api.openweathermap.org/energy/1.0/solar/data?lat=34&lon=34&date=2023-03-28&appid=c9f15adae6de827133a64afb4d661f52
+  body: none
+  auth: none
+}
+
+params:query {
+  lat: 34
+  lon: 34
+  date: 2023-03-28
+  appid: c9f15adae6de827133a64afb4d661f52
+}

@@ -1,0 +1,16 @@
+meta {
+  name: Check OpenWeather API v2
+  type: http
+  seq: 2
+}
+
+get {
+  url: api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=c9f15adae6de827133a64afb4d661f52
+  body: none
+  auth: none
+}
+
+params:query {
+  q: London,uk
+  APPID: c9f15adae6de827133a64afb4d661f52
+}

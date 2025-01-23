@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Rain LibreChat",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
