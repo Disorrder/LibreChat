@@ -109,9 +109,9 @@ actions:
 
 # Example MCP Servers Object Structure
 mcpServers:
-  everything:
-    # type: sse # type can optionally be omitted
-    url: http://localhost:3001/sse
+  # everything:
+  #   # type: sse # type can optionally be omitted
+  #   url: http://localhost:3001/sse
   # puppeteer:
   #   type: stdio
   #   command: npx

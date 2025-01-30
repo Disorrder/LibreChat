@@ -65,7 +65,8 @@
     "b:test:api": "cd api && bun run b:test",
     "b:balance": "bun config/add-balance.js",
     "b:list-balances": "bun config/list-balances.js",
-    "b:mcp:everything": "cd packages/mcp && bun run start:everything-sse",
+    "mcp:everything": "cd packages/mcp && npm run start:everything-sse",
+    "mcp:filesystem": "cd packages/mcp && npm run start:filesystem",
     "reset-terms": "node config/reset-terms.js"
   },
   "repository": {
