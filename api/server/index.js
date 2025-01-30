@@ -142,6 +142,7 @@ let messageCount = 0;
 process.on('uncaughtException', (err) => {
   if (!err.message.includes('fetch failed')) {
     logger.error('There was an uncaught error:', err);
+    logger.error(err.stack);
   }
 
   if (err.message.includes('fetch failed')) {

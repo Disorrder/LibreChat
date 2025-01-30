@@ -26,6 +26,9 @@ services:
         target: /app/.env
       - ./images:/app/client/public/images
       - ./logs:/app/api/logs
+      - type: bind
+        source: ./librechat.railway.yaml
+        target: /app/librechat.yaml
   mongodb:
     container_name: chat-mongodb
     image: mongo
