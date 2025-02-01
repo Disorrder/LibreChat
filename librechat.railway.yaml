@@ -109,15 +109,6 @@ actions:
 
 # Example MCP Servers Object Structure
 mcpServers:
-  # everything:
-  #   # type: sse # type can optionally be omitted
-  #   url: http://localhost:3001/sse
-  # puppeteer:
-  #   type: stdio
-  #   command: npx
-  #   args:
-  #     - -y
-  #     - "@modelcontextprotocol/server-puppeteer"
   filesystem:
     # type: stdio
     command: npx
@@ -126,12 +117,7 @@ mcpServers:
       - "@modelcontextprotocol/server-filesystem"
       - /app/
     iconPath: /app/client/public/assets/logo.svg
-  # mcp-obsidian:
-  #   command: npx
-  #   args:
-  #     - -y
-  #     - "mcp-obsidian"
-  #     - /path/to/obsidian/vault
+
 
 # Definition of custom endpoints
 endpoints:
