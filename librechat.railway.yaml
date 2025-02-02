@@ -117,7 +117,11 @@ mcpServers:
       - "@modelcontextprotocol/server-filesystem"
       - /app/
     iconPath: /app/client/public/assets/logo.svg
-
+  motherduck:
+    command: npm
+    args:
+      - run
+      - mcp:motherduck
 
 # Definition of custom endpoints
 endpoints:

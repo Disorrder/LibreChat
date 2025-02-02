@@ -1,9 +1,14 @@
 # v0.7.6
 
 # Base node image
-FROM node:20-alpine AS node
+FROM node:22-alpine AS node
 
 RUN apk --no-cache add curl
+
+# Install required system libraries for DuckDB on ARM64
+RUN apk add --no-cache \
+    libc6-compat \
+    gcompat
 
 RUN mkdir -p /app && chown node:node /app
 WORKDIR /app
@@ -20,11 +25,16 @@ RUN \
     npm config set fetch-retry-maxtimeout 600000 ; \
     npm config set fetch-retries 5 ; \
     npm config set fetch-retry-mintimeout 15000 ; \
-    npm install --no-audit; \
-    # React client build
-    NODE_OPTIONS="--max-old-space-size=2048" npm run frontend; \
-    npm prune --production; \
-    npm cache clean --force
+    npm install --no-audit;
+
+# Package/mcp build
+RUN npm run build:mcp;
+
+# React client build
+RUN NODE_OPTIONS="--max-old-space-size=2048" npm run frontend;
+
+# RUN npm prune --production; \
+#     npm cache clean --force
 
 RUN mkdir -p /app/client/public/images /app/api/logs
 

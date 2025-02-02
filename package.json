@@ -67,6 +67,8 @@
     "b:list-balances": "bun config/list-balances.js",
     "mcp:everything": "cd packages/mcp && npm run start:everything-sse",
     "mcp:filesystem": "cd packages/mcp && npm run start:filesystem",
+    "mcp:motherduck": "cd packages/mcp && npm run start:motherduck",
+    "mcp:motherduck-sse": "cd packages/mcp && npm run start:motherduck-sse",
     "reset-terms": "node config/reset-terms.js"
   },
   "repository": {
